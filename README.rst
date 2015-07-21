@@ -14,7 +14,7 @@ v0.0.1
 .. image:: https://requires.io/github/SkyLothar/requests-bce/requirements.svg?branch=master
     :target: https://requires.io/github/SkyLothar/requests-bce/requirements/?branch=master
 
-.. image:: https://img.shields.io/pypi/v/requests-aliyun.svg?style=flat-square
+.. image:: https://img.shields.io/pypi/v/requests-bce?style=flat-square
     :target: https://pypi.python.org/pypi/requests-bce/
     :alt: Supported Python versions
 
@@ -47,10 +47,10 @@ Just pass the auth object to requests
 .. code-block:: python
 
     >>> import requests
-    >>> from bceauth import V1Auth
+    >>> from bceauth import AuthV1
     >>> req = requests.post(
     ...     "http://example.com/path/to/file",
-    ...     auth=V1Auth("access-key", "secret-key")
+    ...     auth=AuthV1("access-key", "secret-key")
     ... )
     <Response [200]>
 
@@ -59,8 +59,8 @@ Or set the auth attribute to the session object
 .. code-block:: python
 
     >>> import requests
-    >>> from bceauth import V1Auth
+    >>> from bceauth import AuthV1
     >>> session = requests.session()
-    >>> session.auth = V1Auth("access-key", "secret-key")
+    >>> session.auth = AuthV1("access-key", "secret-key")
     >>> req = session.get("http://example.com/path/to/file")
     <Response [200]>
