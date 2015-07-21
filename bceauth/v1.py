@@ -56,7 +56,7 @@ class AuthV1(requests.auth.AuthBase):
         request.headers["content-type"] = content_type or self.DEFAULT_TYPE
         # set content-md5
         if request.body is not None and "content-md5" not in request.headers:
-            request.header["content-md5"] = utils.cal_b64md5(request.body)
+            request.headers["content-md5"] = utils.cal_b64md5(request.body)
 
     def get_canonical_request(self, request, parsed_url):
         canonical_uri = utils.percent_quote(parsed_url.path, except_slash=True)
