@@ -36,7 +36,7 @@ with open("tests/requirements.txt", "r", "utf-8") as f:
 
 
 setuptools.setup(
-    name="requests-bceauth",
+    name="requests-bce",
     version=__version__,
     description="authentication for bce service",
     long_description=readme,
