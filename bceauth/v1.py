@@ -111,7 +111,7 @@ class AuthV1(requests.auth.AuthBase):
         return time.strftime(self.TIME_FMT, time.gmtime())
 
     def get_sign_key(self, signed_headers, expires_in=None):
-        auth_prefix = "".join([
+        auth_prefix = "/".join([
             "bce-auth-v1",
             self.access_key,
             time.strftime(self.TIME_FMT, time.gmtime()),
