@@ -1,0 +1,2 @@
+PERCENT_SAFE = "._-~"
+MD5_CHUNK_SIZE = 1000 * 1000 * 5  # 5MB
