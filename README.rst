@@ -5,16 +5,16 @@ Version
 -------
 v0.0.4
 
-.. image:: https://img.shields.io/travis/skylothar/requests-bce.svg?style=flat-square
+.. image:: https://img.shields.io/travis/SkyLothar/requests-bce.svg?style=flat-square
     :target: https://travis-ci.org/SkyLothar/requests-bce
 
-.. image:: https://img.shields.io/coveralls/skylothar/requests-bce/master.svg?style=flat-square
+.. image:: https://img.shields.io/coveralls/SkyLothar/requests-bce/master.svg?style=flat-square
     :target: https://coveralls.io/r/SkyLothar/requests-bce
 
 .. image:: https://requires.io/github/SkyLothar/requests-bce/requirements.svg?branch=master
     :target: https://requires.io/github/SkyLothar/requests-bce/requirements/?branch=master
 
-.. image:: https://img.shields.io/pypi/v/requests-bce?style=flat-square
+.. image:: https://img.shields.io/pypi/pyversions/requests-bce.svg?style=flat-square
     :target: https://pypi.python.org/pypi/requests-bce/
     :alt: Supported Python versions
 
