@@ -49,6 +49,8 @@ class AuthV1(requests.auth.AuthBase):
     def prefill_headers(self, request, parsed_url):
         # set host
         request.headers.setdefault("host", parsed_url.netloc)
+        # set x-bce-date
+        request.headers.setdefault("x-bce-date", self.get_utctime())
         # set content-type
         content_type = request.headers.get("content-type")
         if content_type is None:
@@ -106,16 +108,14 @@ class AuthV1(requests.auth.AuthBase):
     def secret_key(self):
         return self._secret_key
 
-    @property
-    def timestamp(self):
+    def get_utctime(self):
         return time.strftime(self.TIME_FMT, time.gmtime())
 
     def get_sign_key(self, signed_headers, expires_in=None):
+        timestamp = signed_headers["x-bce-date"]
         auth_prefix = "/".join([
-            "bce-auth-v1",
-            self.access_key,
-            time.strftime(self.TIME_FMT, time.gmtime()),
-            utils.to_str(expires_in or self.EXPIRES_IN)
+            "bce-auth-v1", self.access_key,
+            timestamp, utils.to_str(expires_in or self.EXPIRES_IN)
         ])
 
         sign_key = hmac.HMAC(

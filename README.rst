@@ -3,7 +3,7 @@ BCE using python-requests
 
 Version
 -------
-v0.0.3
+v0.0.4
 
 .. image:: https://img.shields.io/travis/skylothar/requests-bce.svg?style=flat-square
     :target: https://travis-ci.org/SkyLothar/requests-bce
